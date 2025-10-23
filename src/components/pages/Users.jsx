@@ -79,7 +79,7 @@ function Users() {
 
   return (
     <MainLayout>
-      <div className="p-6">
+      <div className="p-6 page-zoom-plus-10">
         <div className="max-w-7xl mx-auto">
             {/* Page Header */}
             <div className="mb-6">

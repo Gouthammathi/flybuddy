@@ -4,7 +4,7 @@ import logo from '../../assets/logo.png'
 
 function OTP() {
   const navigate = useNavigate()
-  const [otp, setOtp] = useState(['1', '4', '3', '2'])
+  const [otp, setOtp] = useState(['', '', '', ''])
   const [timeLeft, setTimeLeft] = useState(28) // 28 seconds countdown
   const [canResend, setCanResend] = useState(false)
 
@@ -67,7 +67,7 @@ function OTP() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-50 to-pink-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
+      <div className="bg-white rounded-2xl shadow-xl p-10 w-full max-w-lg">
         {/* Logo and Brand */}
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">

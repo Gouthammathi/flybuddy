@@ -88,47 +88,44 @@ function Notifications() {
 
   return (
     <MainLayout>
-      <div className="p-6">
+      <div className="p-6 page-zoom-plus-10">
         <div className="max-w-7xl mx-auto">
-            {/* Page Header */}
+            {/* Page Header with Actions */}
             <div className="mb-6">
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">Notifications</h1>
+              <div className="flex items-center justify-between mb-2">
+                <h1 className="text-3xl font-bold text-gray-900">Notifications</h1>
+                <div className="flex items-center space-x-4">
+                  {/* Create Notification Button */}
+                  <button
+                    onClick={handleCreateNotification}
+                    className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                    </svg>
+                    Create Notification
+                  </button>
+
+                  {/* Filters Button */}
+                  <button
+                    onClick={() => setShowFilters(true)}
+                    className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors relative"
+                  >
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.414A1 1 0 013 6.707V4z" />
+                    </svg>
+                    Filters
+                    {getActiveFiltersCount() > 0 && (
+                      <span className="ml-2 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                        {getActiveFiltersCount()}
+                      </span>
+                    )}
+                  </button>
+                </div>
+              </div>
               <p className="text-gray-600">
                 Manage messages and announcements sent to FlyBuddy users.
               </p>
-            </div>
-
-            {/* Action Bar */}
-            <div className="flex items-center justify-between mb-6">
-              <div></div>
-              <div className="flex items-center space-x-4">
-                {/* Create Notification Button */}
-                <button
-                  onClick={handleCreateNotification}
-                  className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                  </svg>
-                  Create Notification
-                </button>
-
-                {/* Filters Button */}
-                <button
-                  onClick={() => setShowFilters(true)}
-                  className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors relative"
-                >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.414A1 1 0 013 6.707V4z" />
-                  </svg>
-                  Filters
-                  {getActiveFiltersCount() > 0 && (
-                    <span className="ml-2 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                      {getActiveFiltersCount()}
-                    </span>
-                  )}
-                </button>
-              </div>
             </div>
 
             {/* Notifications Table */}

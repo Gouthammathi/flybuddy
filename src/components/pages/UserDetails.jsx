@@ -245,52 +245,48 @@ function UserDetails() {
             </div>
 
             {/* User Summary Card */}
-            <div className="bg-white rounded-xl shadow-sm border p-6 mb-6">
-              <div className="flex items-start space-x-6">
+            <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
+              <div className="flex items-center gap-6">
                 {/* User Avatar */}
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-2xl">
-                  RM
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <img src="/api/placeholder/64/64" alt="User" className="w-full h-full rounded-full object-cover" />
                 </div>
                 
-                {/* User Information */}
+                {/* User Information - Single Row */}
                 <div className="flex-1">
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div>
-                      <label className="text-sm text-gray-500">Name</label>
-                      <p className="font-medium text-gray-900">{userInfo.name}</p>
+                  <div className="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm">
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-600">Name-</span>
+                      <span className="font-medium text-gray-900">{userInfo.name}</span>
                     </div>
-                    <div>
-                      <label className="text-sm text-gray-500">Phone number</label>
-                      <p className="font-medium text-gray-900">{userInfo.phone}</p>
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-600">Phone number -</span>
+                      <span className="font-medium text-gray-900">{userInfo.phone}</span>
                     </div>
-                    <div>
-                      <label className="text-sm text-gray-500">Joined On</label>
-                      <p className="font-medium text-gray-900">{userInfo.joined}</p>
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-600">Joined On -</span>
+                      <span className="font-medium text-gray-900">{userInfo.joined}</span>
                     </div>
-                    <div>
-                      <label className="text-sm text-gray-500">City</label>
-                      <p className="font-medium text-gray-900">{userInfo.city}</p>
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-600">City-</span>
+                      <span className="font-medium text-gray-900">{userInfo.city}</span>
                     </div>
-                    <div>
-                      <label className="text-sm text-gray-500">Email ID</label>
-                      <p className="font-medium text-gray-900">{userInfo.email}</p>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm mt-3">
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-600">E mail ID-</span>
+                      <span className="font-medium text-gray-900">{userInfo.email}</span>
                     </div>
-                    <div>
-                      <label className="text-sm text-gray-500">Plan</label>
-                      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                        userInfo.plan === 'Premium' 
-                          ? 'bg-purple-100 text-purple-800' 
-                          : 'bg-gray-100 text-gray-800'
-                      }`}>
-                        {userInfo.plan}
-                      </span>
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-600">Plan-</span>
+                      <span className="font-medium text-gray-900">{userInfo.plan}</span>
                     </div>
-                    <div>
-                      <label className="text-sm text-gray-500">Tickets Uploaded</label>
-                      <p className="font-medium text-gray-900">{userInfo.ticketsUploaded}</p>
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-600">Tickets Uploaded-</span>
+                      <span className="font-medium text-gray-900">{userInfo.ticketsUploaded}</span>
                     </div>
-                    <div>
-                      <label className="text-sm text-gray-500">Status</label>
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-600">Status-</span>
                       <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
                         {userInfo.status}
                       </span>
@@ -301,34 +297,34 @@ function UserDetails() {
             </div>
 
             {/* More Details Card */}
-            <div className="bg-white rounded-xl shadow-sm border p-6 mb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">More Details</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-6">More Details</h3>
+              <div className="grid grid-cols-3 gap-x-12 gap-y-6">
                 <div>
-                  <label className="text-sm text-gray-500">Plan Details</label>
-                  <p className="font-medium text-gray-900">{moreDetails.planDetails}</p>
+                  <label className="text-sm text-gray-500 block mb-1">Plan Details</label>
+                  <p className="text-sm font-medium text-gray-900">{moreDetails.planDetails}</p>
                 </div>
                 <div>
-                  <label className="text-sm text-gray-500">Chats Started</label>
-                  <p className="font-medium text-gray-900">{moreDetails.chatsStarted}</p>
+                  <label className="text-sm text-gray-500 block mb-1">Chats Started</label>
+                  <p className="text-sm font-medium text-gray-900">{moreDetails.chatsStarted}</p>
                 </div>
                 <div>
-                  <label className="text-sm text-gray-500">Matches Found</label>
-                  <p className="font-medium text-gray-900">{moreDetails.matchesFound}</p>
+                  <label className="text-sm text-gray-500 block mb-1">Matches Found</label>
+                  <p className="text-sm font-medium text-gray-900">{moreDetails.matchesFound}</p>
                 </div>
                 <div>
-                  <label className="text-sm text-gray-500">Last Login</label>
-                  <p className="font-medium text-gray-900">{moreDetails.lastLogin}</p>
+                  <label className="text-sm text-gray-500 block mb-1">Last Login</label>
+                  <p className="text-sm font-medium text-gray-900">{moreDetails.lastLogin}</p>
                 </div>
                 <div>
-                  <label className="text-sm text-gray-500">Recent Activity</label>
-                  <p className="font-medium text-gray-900">{moreDetails.recentActivity}</p>
+                  <label className="text-sm text-gray-500 block mb-1">Recent Activity</label>
+                  <p className="text-sm font-medium text-gray-900">{moreDetails.recentActivity}</p>
                 </div>
               </div>
             </div>
 
             {/* Tabs and Table Section */}
-            <div className="bg-white rounded-xl shadow-sm border">
+            <div className="bg-white rounded-xl shadow-sm">
               {/* Tabs */}
               <div className="border-b border-gray-200">
                 <nav className="flex space-x-8 px-6">
@@ -340,10 +336,10 @@ function UserDetails() {
                     <button
                       key={tab.id}
                       onClick={() => setActiveTab(tab.id)}
-                      className={`py-4 px-1 border-b-2 font-medium text-sm ${
+                      className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
                         activeTab === tab.id
                           ? 'border-blue-500 text-blue-600'
-                          : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                          : 'border-transparent text-gray-500 hover:text-gray-700'
                       }`}
                     >
                       {tab.label}

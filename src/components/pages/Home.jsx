@@ -69,8 +69,9 @@ function Home() {
 
   return (
     <MainLayout>
-      <div className="p-6">
-            <div className="flex items-center justify-between mb-6">
+      <div className="p-6 page-zoom-plus-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-6">
               <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
               <div className="flex space-x-2">
                 <button className="px-4 py-2 bg-blue-500 text-white rounded-lg text-sm font-medium">Today</button>
@@ -197,6 +198,7 @@ function Home() {
                 </table>
               </div>
             </div>
+        </div>
       </div>
     </MainLayout>
   )

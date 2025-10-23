@@ -17,24 +17,24 @@ function Login() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-50 to-pink-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-50 to-pink-100 flex items-center justify-center p-6">
+      <div className="bg-white rounded-3xl shadow-2xl p-12 w-full max-w-xl">
         {/* Logo and Brand */}
-        <div className="text-center mb-8">
-          <div className="flex justify-center mb-4">
-            <img src={logo} alt="Flybuddy" className="h-16 w-auto" />
+        <div className="text-center mb-10">
+          <div className="flex justify-center mb-6">
+            <img src={logo} alt="Flybuddy" className="h-20 w-auto" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">Welcome Back</h1>
-          <p className="text-gray-500 text-sm">
+          <h1 className="text-4xl font-bold text-gray-800 mb-3">Welcome Back</h1>
+          <p className="text-gray-500 text-base">
             Enter your email and password to access your account
           </p>
         </div>
 
         {/* Login Form */}
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-7">
           {/* Email Field */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="block text-base font-medium text-gray-700 mb-3">
               Email Id
             </label>
             <input
@@ -42,14 +42,14 @@ function Login() {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+              className="w-full px-5 py-4 text-base border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
               placeholder="Enter your email"
             />
           </div>
 
           {/* Password Field */}
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="password" className="block text-base font-medium text-gray-700 mb-3">
               Password
             </label>
             <div className="relative">
@@ -58,7 +58,7 @@ function Login() {
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+                className="w-full px-5 py-4 pr-14 text-base border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
                 placeholder="Enter your password"
               />
               <button
@@ -104,7 +104,7 @@ function Login() {
           {/* Sign In Button */}
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-pink-400 to-purple-500 hover:from-pink-500 hover:to-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+            className="w-full bg-gradient-to-r from-pink-400 to-purple-500 hover:from-pink-500 hover:to-purple-600 text-white font-semibold text-lg py-5 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 shadow-lg mt-8"
           >
             Sign In
           </button>

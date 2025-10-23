@@ -66,23 +66,23 @@ function OTP() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-50 to-pink-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-xl p-10 w-full max-w-lg">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-50 to-pink-100 flex items-center justify-center p-6">
+      <div className="bg-white rounded-3xl shadow-2xl p-12 w-full max-w-xl">
         {/* Logo and Brand */}
-        <div className="text-center mb-8">
-          <div className="flex justify-center mb-4">
-            <img src={logo} alt="Flybuddy" className="h-16 w-auto" />
+        <div className="text-center mb-10">
+          <div className="flex justify-center mb-6">
+            <img src={logo} alt="Flybuddy" className="h-20 w-auto" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">Verify OTP</h1>
-          <p className="text-gray-500 text-sm">
+          <h1 className="text-4xl font-bold text-gray-800 mb-3">Verify OTP</h1>
+          <p className="text-gray-500 text-base">
             Enter the 4-digit code sent to your Email Id
           </p>
         </div>
 
         {/* OTP Form */}
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-8">
           {/* OTP Input Fields */}
-          <div className="flex justify-center space-x-3 mb-6">
+          <div className="flex justify-center space-x-4 mb-8">
             {otp.map((digit, index) => (
               <input
                 key={index}
@@ -91,21 +91,21 @@ function OTP() {
                 value={digit}
                 onChange={(e) => handleOtpChange(index, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(index, e)}
-                className="w-12 h-12 text-center text-xl font-semibold border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+                className="w-16 h-16 text-center text-2xl font-semibold border-2 border-gray-300 rounded-xl bg-gray-50 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-200 shadow-sm"
                 maxLength="1"
               />
             ))}
           </div>
 
           {/* Resend Section */}
-          <div className="text-center mb-6">
-            <p className="text-gray-600 text-sm">
+          <div className="text-center mb-8">
+            <p className="text-gray-600 text-base">
               Didn't get it {formatTime(timeLeft)}?{' '}
               <button
                 type="button"
                 onClick={handleResend}
                 disabled={!canResend}
-                className={`font-medium transition-colors duration-200 ${
+                className={`font-semibold text-base transition-colors duration-200 ${
                   canResend
                     ? 'text-purple-500 hover:text-purple-600 cursor-pointer'
                     : 'text-gray-400 cursor-not-allowed'
@@ -119,7 +119,7 @@ function OTP() {
           {/* Sign In Button */}
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-pink-400 to-purple-500 hover:from-pink-500 hover:to-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+            className="w-full bg-gradient-to-r from-pink-400 to-purple-500 hover:from-pink-500 hover:to-purple-600 text-white font-semibold text-lg py-5 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 shadow-lg"
           >
             Sign In
           </button>

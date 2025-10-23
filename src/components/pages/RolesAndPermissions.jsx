@@ -119,22 +119,22 @@ function RolesAndPermissions() {
             {/* Roles Table */}
             <div className="bg-white rounded-xl shadow-sm overflow-hidden">
               <div className="overflow-x-auto">
-                <table className="min-w-full divide-y divide-gray-200">
+                <table className="min-w-full divide-y divide-gray-200" style={{ fontSize: '1.8em' }}>
                   <thead className="bg-gray-50">
                     <tr>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">
                         Member Name
                       </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">
                         Role Name
                       </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">
                         Description
                       </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">
                         Created On
                       </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">
                         Actions
                       </th>
                     </tr>
@@ -142,22 +142,22 @@ function RolesAndPermissions() {
                   <tbody className="bg-white divide-y divide-gray-200">
                     {filteredRoles.map((role) => (
                       <tr key={role.id} className="hover:bg-gray-50">
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm font-medium text-gray-900">{role.memberName}</div>
+                        <td className="px-3 py-2 whitespace-nowrap">
+                          <div className="text-lg font-semibold text-gray-900">{role.memberName}</div>
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-900">{role.roleName}</div>
+                        <td className="px-3 py-2 whitespace-nowrap">
+                          <div className="text-lg text-gray-600">{role.roleName}</div>
                         </td>
-                        <td className="px-6 py-4">
-                          <div className="text-sm text-gray-900">{role.description}</div>
+                        <td className="px-3 py-2">
+                          <div className="text-lg text-gray-600">{role.description}</div>
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-900">{role.createdOn}</div>
+                        <td className="px-3 py-2 whitespace-nowrap">
+                          <div className="text-lg text-gray-600">{role.createdOn}</div>
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
+                        <td className="px-3 py-2 whitespace-nowrap">
                           <button
                             onClick={() => handleViewRole(role.id)}
-                            className="text-blue-600 hover:text-blue-900 text-sm font-medium"
+                            className="px-4 py-2 bg-blue-200 text-gray-800 rounded-full text-sm font-medium hover:bg-blue-300 transition-colors"
                           >
                             View
                           </button>

@@ -197,64 +197,102 @@ main > div {
   }
 }
 
-/* Specific pages zoom +10% (Dashboard, Users, Bookings, Notifications, Roles, Subscriptions, Reports) */
+/* Specific pages zoom +15% (Dashboard, Users, Bookings, Notifications, Roles, Subscriptions, Reports) */
 .page-zoom-plus-10 {
-  font-size: 1.1em;
+  font-size: 1.15em;
 }
 
-/* Table content - increased font size and padding */
+/* Table content - increased font size only (not table size) */
 .page-zoom-plus-10 table {
-  font-size: 1.15em; /* Increased table font size */
+  font-size: 1em;
 }
 
 .page-zoom-plus-10 table th,
 .page-zoom-plus-10 table td {
-  font-size: 1em;
-  padding: 1rem 1.5rem !important; /* Increased padding for more content space */
+  font-size: 1.5em !important; /* Much larger text */
+  padding: 1rem 1.5rem !important; /* Keep original padding */
+  line-height: 1.5;
 }
 
 .page-zoom-plus-10 table th {
-  font-size: 1.05em; /* Slightly larger headers */
+  font-size: 1.5em !important; /* Large headers */
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #4b5563;
+}
+
+.page-zoom-plus-10 table td {
+  font-size: 1.5em !important; /* Large cell text */
+  color: #1f2937;
 }
 
 /* Also apply to tables outside page-zoom-plus-10 */
 table th,
 table td {
-  padding: 0.9rem 1.3rem !important;
-  font-size: 1.1em !important;
+  padding: 0.9rem 1.3rem !important; /* Keep original padding */
+  font-size: 1.5em !important; /* Larger text */
+  line-height: 1.5;
 }
 
-.page-zoom-plus-10 .p-6 { padding: 1.815rem !important; }
-.page-zoom-plus-10 .p-4 { padding: 1.21rem !important; }
-.page-zoom-plus-10 .p-2 { padding: 0.605rem !important; }
-.page-zoom-plus-10 .m-6 { margin: 1.815rem !important; }
-.page-zoom-plus-10 .m-4 { margin: 1.21rem !important; }
-.page-zoom-plus-10 .m-2 { margin: 0.605rem !important; }
-.page-zoom-plus-10 .mb-6 { margin-bottom: 1.815rem !important; }
-.page-zoom-plus-10 .mb-4 { margin-bottom: 1.21rem !important; }
-.page-zoom-plus-10 .mb-2 { margin-bottom: 0.605rem !important; }
-.page-zoom-plus-10 .mt-6 { margin-top: 1.815rem !important; }
-.page-zoom-plus-10 .mt-4 { margin-top: 1.21rem !important; }
-.page-zoom-plus-10 .mt-2 { margin-top: 0.605rem !important; }
+table th {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #4b5563;
+}
 
-.page-zoom-plus-10 .text-3xl { font-size: 1.90575rem !important; }
-.page-zoom-plus-10 .text-2xl { font-size: 1.2705rem !important; }
-.page-zoom-plus-10 .text-xl { font-size: 1.05875rem !important; }
-.page-zoom-plus-10 .text-lg { font-size: 0.952875rem !important; }
-.page-zoom-plus-10 .text-base { font-size: 0.847rem !important; }
-.page-zoom-plus-10 .text-sm { font-size: 0.741125rem !important; }
-.page-zoom-plus-10 .text-xs { font-size: 0.63525rem !important; }
+table td {
+  color: #1f2937;
+}
 
-.page-zoom-plus-10 .h-16 { height: 3.388rem !important; }
-.page-zoom-plus-10 .h-12 { height: 2.541rem !important; }
-.page-zoom-plus-10 .h-8 { height: 1.694rem !important; }
-.page-zoom-plus-10 .h-6 { height: 1.2705rem !important; }
-.page-zoom-plus-10 .h-5 { height: 1.05875rem !important; }
-.page-zoom-plus-10 .h-4 { height: 0.847rem !important; }
+/* Enhance table row spacing */
+.page-zoom-plus-10 table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
 
-.page-zoom-plus-10 .w-16 { width: 3.388rem !important; }
-.page-zoom-plus-10 .w-12 { width: 2.541rem !important; }
-.page-zoom-plus-10 .w-8 { width: 1.694rem !important; }
-.page-zoom-plus-10 .w-6 { width: 1.2705rem !important; }
-.page-zoom-plus-10 .w-5 { width: 1.05875rem !important; }
-.page-zoom-plus-10 .w-4 { width: 0.847rem !important; }
+table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Better hover effect for rows */
+.page-zoom-plus-10 table tbody tr:hover,
+table tbody tr:hover {
+  background-color: #f9fafb !important;
+  transition: background-color 0.2s ease;
+}
+
+.page-zoom-plus-10 .p-6 { padding: 1.32825rem !important; } /* 1.155 * 1.15 */
+.page-zoom-plus-10 .p-4 { padding: 0.8855rem !important; } /* 0.77 * 1.15 */
+.page-zoom-plus-10 .p-2 { padding: 0.44275rem !important; } /* 0.385 * 1.15 */
+.page-zoom-plus-10 .m-6 { margin: 1.32825rem !important; }
+.page-zoom-plus-10 .m-4 { margin: 0.8855rem !important; }
+.page-zoom-plus-10 .m-2 { margin: 0.44275rem !important; }
+.page-zoom-plus-10 .mb-6 { margin-bottom: 1.32825rem !important; }
+.page-zoom-plus-10 .mb-4 { margin-bottom: 0.8855rem !important; }
+.page-zoom-plus-10 .mb-2 { margin-bottom: 0.44275rem !important; }
+.page-zoom-plus-10 .mt-6 { margin-top: 1.32825rem !important; }
+.page-zoom-plus-10 .mt-4 { margin-top: 0.8855rem !important; }
+.page-zoom-plus-10 .mt-2 { margin-top: 0.44275rem !important; }
+
+.page-zoom-plus-10 .text-3xl { font-size: 1.992375rem !important; } /* 1.7325 * 1.15 */
+.page-zoom-plus-10 .text-2xl { font-size: 1.32825rem !important; } /* 1.155 * 1.15 */
+.page-zoom-plus-10 .text-xl { font-size: 1.106875rem !important; } /* 0.9625 * 1.15 */
+.page-zoom-plus-10 .text-lg { font-size: 0.9961875rem !important; } /* 0.86625 * 1.15 */
+.page-zoom-plus-10 .text-base { font-size: 0.8855rem !important; } /* 0.77 * 1.15 */
+.page-zoom-plus-10 .text-sm { font-size: 0.7748125rem !important; } /* 0.67375 * 1.15 */
+.page-zoom-plus-10 .text-xs { font-size: 0.664125rem !important; } /* 0.5775 * 1.15 */
+
+.page-zoom-plus-10 .h-16 { height: 3.542rem !important; } /* 3.08 * 1.15 */
+.page-zoom-plus-10 .h-12 { height: 2.6565rem !important; } /* 2.31 * 1.15 */
+.page-zoom-plus-10 .h-8 { height: 1.771rem !important; } /* 1.54 * 1.15 */
+.page-zoom-plus-10 .h-6 { height: 1.32825rem !important; } /* 1.155 * 1.15 */
+.page-zoom-plus-10 .h-5 { height: 1.106875rem !important; } /* 0.9625 * 1.15 */
+.page-zoom-plus-10 .h-4 { height: 0.8855rem !important; } /* 0.77 * 1.15 */
+
+.page-zoom-plus-10 .w-16 { width: 3.542rem !important; }
+.page-zoom-plus-10 .w-12 { width: 2.6565rem !important; }
+.page-zoom-plus-10 .w-8 { width: 1.771rem !important; }
+.page-zoom-plus-10 .w-6 { width: 1.32825rem !important; }
+.page-zoom-plus-10 .w-5 { width: 1.106875rem !important; }
+.page-zoom-plus-10 .w-4 { width: 0.8855rem !important; }

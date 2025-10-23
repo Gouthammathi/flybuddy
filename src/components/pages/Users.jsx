@@ -79,78 +79,80 @@ function Users() {
 
   return (
     <MainLayout>
-      <div className="p-6 page-zoom-plus-10">
+      <div className="p-6 page-zoom-plus-10" style={{ fontSize: '1.12em' }}>
         <div className="max-w-7xl mx-auto">
-            {/* Page Header */}
+            {/* Page Header with Search and Filters */}
             <div className="mb-6">
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">All Users</h1>
-              <p className="text-gray-600">
-                Manage all registered users, their plans, and uploaded tickets.
-              </p>
-            </div>
-
-            {/* Action Bar */}
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center space-x-4">
-                {/* Search */}
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent w-64"
-                  />
-                  <svg className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h1 className="text-3xl font-bold text-gray-900">All Users</h1>
+                  <p className="text-gray-600 mt-1">
+                    Manage all registered users, their plans, and uploaded tickets.
+                  </p>
                 </div>
+                
+                {/* Search and Filters - Top Right */}
+                <div className="flex items-center space-x-4">
+                  {/* Search Bar */}
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Search"
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                    <svg className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </div>
 
-                {/* Filters */}
-                <button
-                  onClick={() => setShowFilters(true)}
-                  className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors relative"
-                >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.414A1 1 0 013 6.707V4z" />
-                  </svg>
-                  Filters
-                  {getActiveFiltersCount() > 0 && (
-                    <span className="ml-2 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                      {getActiveFiltersCount()}
-                    </span>
-                  )}
-                </button>
+                  {/* Filters Button */}
+                  <button
+                    onClick={() => setShowFilters(true)}
+                    className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors relative"
+                  >
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.414A1 1 0 013 6.707V4z" />
+                    </svg>
+                    Filters
+                    {getActiveFiltersCount() > 0 && (
+                      <span className="ml-2 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                        {getActiveFiltersCount()}
+                      </span>
+                    )}
+                  </button>
+                </div>
               </div>
             </div>
 
             {/* Users Table */}
             <div className="bg-white rounded-xl shadow-sm border overflow-hidden">
               <div className="overflow-x-auto">
-                <table className="w-full">
+                <table className="w-full" style={{ fontSize: '1.8em' }}>
                   <thead className="bg-gray-50">
                     <tr>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Joined On</th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Plan</th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Name</th>
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Email</th>
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Joined On</th>
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Plan</th>
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Action</th>
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
                     {currentUsers.map((user) => (
                       <tr key={user.id} className="hover:bg-gray-50">
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        <td className="px-3 py-2 whitespace-nowrap text-lg font-semibold text-gray-900">
                           {user.name}
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td className="px-3 py-2 whitespace-nowrap text-lg text-gray-600">
                           {user.email}
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td className="px-3 py-2 whitespace-nowrap text-lg text-gray-600">
                           {user.joined}
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <span className={`px-3 py-1 text-xs font-medium rounded-full ${
+                        <td className="px-3 py-2 whitespace-nowrap">
+                          <span className={`px-2 py-1 text-sm font-semibold rounded-full ${
                             user.plan === 'Premium' 
                               ? 'bg-purple-100 text-purple-800' 
                               : 'bg-gray-100 text-gray-800'
@@ -158,10 +160,10 @@ function Users() {
                             {user.plan}
                           </span>
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm">
+                        <td className="px-3 py-2 whitespace-nowrap text-lg">
                           <button
                             onClick={() => handleViewUser(user.id)}
-                            className="text-blue-600 hover:text-blue-800 font-medium"
+                            className="px-4 py-2 bg-blue-200 text-gray-800 rounded-full text-sm font-medium hover:bg-blue-300 transition-colors"
                           >
                             View
                           </button>

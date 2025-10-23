@@ -131,30 +131,30 @@ function Notifications() {
             {/* Notifications Table */}
             <div className="bg-white rounded-xl shadow-sm border overflow-hidden">
               <div className="overflow-x-auto">
-                <table className="w-full">
+                <table className="w-full" style={{ fontSize: '1.8em' }}>
                   <thead className="bg-gray-50">
                     <tr>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Audience</th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Title</th>
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Audience</th>
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Date</th>
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Status</th>
+                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Action</th>
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
                     {currentNotifications.map((notification) => (
                       <tr key={notification.id} className="hover:bg-gray-50">
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        <td className="px-3 py-2 whitespace-nowrap text-lg font-semibold text-gray-900">
                           {notification.title}
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td className="px-3 py-2 whitespace-nowrap text-lg text-gray-600">
                           {notification.audience}
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td className="px-3 py-2 whitespace-nowrap text-lg text-gray-600">
                           {notification.date}
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                        <td className="px-3 py-2 whitespace-nowrap">
+                          <span className={`inline-flex items-center px-2 py-1 rounded-full text-sm font-semibold ${
                             notification.status === 'Sent' 
                               ? 'bg-green-100 text-green-800' 
                               : notification.status === 'Scheduled'
@@ -164,10 +164,10 @@ function Notifications() {
                             {notification.status}
                           </span>
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm">
+                        <td className="px-3 py-2 whitespace-nowrap text-lg">
                           <button
                             onClick={() => handleViewNotification(notification.id)}
-                            className="text-blue-600 hover:text-blue-800 font-medium"
+                            className="px-4 py-2 bg-blue-200 text-gray-800 rounded-full text-sm font-medium hover:bg-blue-300 transition-colors"
                           >
                             View
                           </button>

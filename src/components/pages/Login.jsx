@@ -4,8 +4,8 @@ import logo from '../../assets/logo.png'
 
 function Login() {
   const navigate = useNavigate()
-  const [email, setEmail] = useState('Ria@gmail.com')
-  const [password, setPassword] = useState('Ria123')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
 
   const handleSubmit = (e) => {

@@ -1,0 +1,298 @@
+@import "tailwindcss";
+
+/* Global font size and spacing reduction by 23% while maintaining full width */
+html {
+  font-size: 12.32px; /* Default is 16px, reduced by 23% = 12.32px */
+}
+
+body {
+  font-size: 0.77rem; /* 77% of base size */
+}
+
+/* Scale down all spacing, padding, margins proportionally */
+* {
+  --scale-factor: 0.77;
+}
+
+/* Adjust common spacing */
+.p-6 { padding: 1.155rem !important; } /* 4.62 instead of 6 */
+.p-4 { padding: 0.77rem !important; } /* 3.08 instead of 4 */
+.p-2 { padding: 0.385rem !important; } /* 1.54 instead of 2 */
+.m-6 { margin: 1.155rem !important; }
+.m-4 { margin: 0.77rem !important; }
+.m-2 { margin: 0.385rem !important; }
+.mb-6 { margin-bottom: 1.155rem !important; }
+.mb-4 { margin-bottom: 0.77rem !important; }
+.mb-2 { margin-bottom: 0.385rem !important; }
+.mt-6 { margin-top: 1.155rem !important; }
+.mt-4 { margin-top: 0.77rem !important; }
+.mt-2 { margin-top: 0.385rem !important; }
+
+/* Scale down text sizes */
+.text-3xl { font-size: 1.7325rem !important; } /* ~27.72px instead of 36px */
+.text-2xl { font-size: 1.155rem !important; } /* ~18.48px instead of 24px */
+.text-xl { font-size: 0.9625rem !important; } /* ~15.4px instead of 20px */
+.text-lg { font-size: 0.86625rem !important; } /* ~13.86px instead of 18px */
+.text-base { font-size: 0.77rem !important; } /* ~12.32px instead of 16px */
+.text-sm { font-size: 0.67375rem !important; } /* ~10.78px instead of 14px */
+.text-xs { font-size: 0.5775rem !important; } /* ~9.24px instead of 12px */
+
+/* Scale down button and input sizes */
+button, input, select, textarea {
+  font-size: 0.77em;
+}
+
+/* Scale down heights */
+.h-16 { height: 3.08rem !important; } /* 49.28px instead of 64px */
+.h-12 { height: 2.31rem !important; } /* 36.96px instead of 48px */
+.h-8 { height: 1.54rem !important; } /* 24.64px instead of 32px */
+.h-6 { height: 1.155rem !important; } /* 18.48px instead of 24px */
+.h-5 { height: 0.9625rem !important; } /* 15.4px instead of 20px */
+.h-4 { height: 0.77rem !important; } /* 12.32px instead of 16px */
+
+/* Scale down widths for icons and small elements */
+.w-16 { width: 3.08rem !important; }
+.w-12 { width: 2.31rem !important; }
+.w-8 { width: 1.54rem !important; }
+.w-6 { width: 1.155rem !important; }
+.w-5 { width: 0.9625rem !important; }
+.w-4 { width: 0.77rem !important; }
+
+/* Clean, Minimal, Professional Dashboard Borders - Grey Theme */
+
+/* Override Tailwind border colors with professional grey */
+.border-gray-200 {
+  border-color: #e5e7eb !important;
+}
+
+.border-gray-300 {
+  border-color: #d1d5db !important;
+}
+
+/* Tab borders - clean and minimal */
+.border-b,
+.border-t,
+.border-l,
+.border-r,
+.border {
+  border-color: #e5e7eb !important;
+}
+
+/* Table borders - professional grey */
+table,
+thead,
+tbody,
+tr,
+th,
+td {
+  border-color: #e5e7eb !important;
+}
+
+/* Divide borders for lists and separators */
+.divide-y > * + *,
+.divide-x > * + * {
+  border-color: #e5e7eb !important;
+}
+
+/* Card borders - subtle grey */
+.rounded-xl,
+.rounded-lg,
+.shadow-sm {
+  border: 1px solid #e5e7eb;
+}
+
+/* Input and form borders - clean grey */
+input,
+select,
+textarea {
+  border-color: #d1d5db !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #9ca3af !important;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.1);
+}
+
+/* Button borders - minimal */
+button {
+  border-color: #e5e7eb !important;
+}
+
+/* Modal and overlay borders */
+.fixed .bg-white {
+  border: 1px solid #e5e7eb;
+}
+
+/* Sidebar - remove all borders for clean look */
+nav,
+nav *,
+aside,
+aside *,
+[class*="sidebar"],
+.bg-white.shadow-lg,
+.bg-white.border-r {
+  border: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* Keep only sidebar shadow, no borders */
+.bg-white.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+}
+
+/* Tab active state - clean underline */
+.border-b-2 {
+  border-bottom-color: #3b82f6 !important;
+}
+
+/* Hover states - subtle grey */
+tr:hover,
+.hover\:bg-gray-50:hover {
+  background-color: #f9fafb !important;
+  border-color: #e5e7eb !important;
+}
+
+/* Professional divider lines */
+hr,
+.border-t-2,
+.border-b-2 {
+  border-color: #e5e7eb !important;
+}
+
+/* Maintain curved edges - don't override existing border-radius */
+/* Removed global border-radius override to preserve Tailwind's rounded classes */
+
+/* Remove harsh black borders */
+.border-black {
+  border-color: #e5e7eb !important;
+}
+
+/* Ensure all borders are soft grey */
+[class*="border-"] {
+  border-color: #e5e7eb !important;
+}
+
+/* Consistent viewport/container width across all pages */
+main > div {
+  max-width: 100%;
+}
+
+/* Consistent page padding - same as Dashboard */
+.page-container {
+  padding: 1.5rem;
+}
+
+/* Responsive max-width for content */
+@media (min-width: 1536px) {
+  main > div > div {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Specific pages zoom +15% (Dashboard, Users, Bookings, Notifications, Roles, Subscriptions, Reports) */
+.page-zoom-plus-10 {
+  font-size: 1.15em;
+}
+
+/* Table content - increased font size only (not table size) */
+.page-zoom-plus-10 table {
+  font-size: 1em;
+}
+
+.page-zoom-plus-10 table th,
+.page-zoom-plus-10 table td {
+  font-size: 1.5em !important; /* Much larger text */
+  padding: 1rem 1.5rem !important; /* Keep original padding */
+  line-height: 1.5;
+}
+
+.page-zoom-plus-10 table th {
+  font-size: 1.5em !important; /* Large headers */
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #4b5563;
+}
+
+.page-zoom-plus-10 table td {
+  font-size: 1.5em !important; /* Large cell text */
+  color: #1f2937;
+}
+
+/* Also apply to tables outside page-zoom-plus-10 */
+table th,
+table td {
+  padding: 0.9rem 1.3rem !important; /* Keep original padding */
+  font-size: 1.5em !important; /* Larger text */
+  line-height: 1.5;
+}
+
+table th {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #4b5563;
+}
+
+table td {
+  color: #1f2937;
+}
+
+/* Enhance table row spacing */
+.page-zoom-plus-10 table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Better hover effect for rows */
+.page-zoom-plus-10 table tbody tr:hover,
+table tbody tr:hover {
+  background-color: #f9fafb !important;
+  transition: background-color 0.2s ease;
+}
+
+.page-zoom-plus-10 .p-6 { padding: 1.32825rem !important; } /* 1.155 * 1.15 */
+.page-zoom-plus-10 .p-4 { padding: 0.8855rem !important; } /* 0.77 * 1.15 */
+.page-zoom-plus-10 .p-2 { padding: 0.44275rem !important; } /* 0.385 * 1.15 */
+.page-zoom-plus-10 .m-6 { margin: 1.32825rem !important; }
+.page-zoom-plus-10 .m-4 { margin: 0.8855rem !important; }
+.page-zoom-plus-10 .m-2 { margin: 0.44275rem !important; }
+.page-zoom-plus-10 .mb-6 { margin-bottom: 1.32825rem !important; }
+.page-zoom-plus-10 .mb-4 { margin-bottom: 0.8855rem !important; }
+.page-zoom-plus-10 .mb-2 { margin-bottom: 0.44275rem !important; }
+.page-zoom-plus-10 .mt-6 { margin-top: 1.32825rem !important; }
+.page-zoom-plus-10 .mt-4 { margin-top: 0.8855rem !important; }
+.page-zoom-plus-10 .mt-2 { margin-top: 0.44275rem !important; }
+
+.page-zoom-plus-10 .text-3xl { font-size: 1.992375rem !important; } /* 1.7325 * 1.15 */
+.page-zoom-plus-10 .text-2xl { font-size: 1.32825rem !important; } /* 1.155 * 1.15 */
+.page-zoom-plus-10 .text-xl { font-size: 1.106875rem !important; } /* 0.9625 * 1.15 */
+.page-zoom-plus-10 .text-lg { font-size: 0.9961875rem !important; } /* 0.86625 * 1.15 */
+.page-zoom-plus-10 .text-base { font-size: 0.8855rem !important; } /* 0.77 * 1.15 */
+.page-zoom-plus-10 .text-sm { font-size: 0.7748125rem !important; } /* 0.67375 * 1.15 */
+.page-zoom-plus-10 .text-xs { font-size: 0.664125rem !important; } /* 0.5775 * 1.15 */
+
+.page-zoom-plus-10 .h-16 { height: 3.542rem !important; } /* 3.08 * 1.15 */
+.page-zoom-plus-10 .h-12 { height: 2.6565rem !important; } /* 2.31 * 1.15 */
+.page-zoom-plus-10 .h-8 { height: 1.771rem !important; } /* 1.54 * 1.15 */
+.page-zoom-plus-10 .h-6 { height: 1.32825rem !important; } /* 1.155 * 1.15 */
+.page-zoom-plus-10 .h-5 { height: 1.106875rem !important; } /* 0.9625 * 1.15 */
+.page-zoom-plus-10 .h-4 { height: 0.8855rem !important; } /* 0.77 * 1.15 */
+
+.page-zoom-plus-10 .w-16 { width: 3.542rem !important; }
+.page-zoom-plus-10 .w-12 { width: 2.6565rem !important; }
+.page-zoom-plus-10 .w-8 { width: 1.771rem !important; }
+.page-zoom-plus-10 .w-6 { width: 1.32825rem !important; }
+.page-zoom-plus-10 .w-5 { width: 1.106875rem !important; }
+.page-zoom-plus-10 .w-4 { width: 0.8855rem !important; }

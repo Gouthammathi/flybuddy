@@ -108,14 +108,14 @@ function Login() {
             type="submit"
             className="w-full text-white font-semibold text-lg py-5 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-lg mt-8"
             style={{
-              background: 'linear-gradient(to right, #ABBCD6, #B5D8E7)',
-              boxShadow: '0 4px 15px rgba(171, 188, 214, 0.4)'
+              background: '#D597C1',
+              boxShadow: '0 4px 15px rgba(213, 151, 193, 0.4)'
             }}
             onMouseEnter={(e) => {
-              e.target.style.background = 'linear-gradient(to right, #9BA8C4, #A5C8D7)'
+              e.target.style.background = '#C485B0'
             }}
             onMouseLeave={(e) => {
-              e.target.style.background = 'linear-gradient(to right, #ABBCD6, #B5D8E7)'
+              e.target.style.background = '#D597C1'
             }}
           >
             Sign In

@@ -129,41 +129,38 @@ function Users() {
             {/* Users Table */}
             <div className="bg-white rounded-xl shadow-sm border overflow-hidden">
               <div className="overflow-x-auto">
-                <table className="w-full" style={{ fontSize: '1.8em' }}>
-                  <thead className="bg-gray-50">
+                <table className="w-full">
+                  <thead className="bg-gray-100">
                     <tr>
-                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Name</th>
-                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Email</th>
-                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Joined On</th>
-                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Plan</th>
-                      <th className="px-3 py-2 text-left text-xl font-bold text-gray-800 uppercase tracking-wider">Action</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider rounded-tl-xl">Name</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Email</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Joined On</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Plan</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider rounded-tr-xl">Action</th>
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
                     {currentUsers.map((user) => (
                       <tr key={user.id} className="hover:bg-gray-50">
-                        <td className="px-3 py-2 whitespace-nowrap text-lg font-semibold text-gray-900">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                           {user.name}
                         </td>
-                        <td className="px-3 py-2 whitespace-nowrap text-lg text-gray-600">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           {user.email}
                         </td>
-                        <td className="px-3 py-2 whitespace-nowrap text-lg text-gray-600">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           {user.joined}
                         </td>
-                        <td className="px-3 py-2 whitespace-nowrap">
-                          <span className={`px-2 py-1 text-sm font-semibold rounded-full ${
-                            user.plan === 'Premium' 
-                              ? 'bg-purple-100 text-purple-800' 
-                              : 'bg-gray-100 text-gray-800'
-                          }`}>
-                            {user.plan}
-                          </span>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                          {user.plan}
                         </td>
-                        <td className="px-3 py-2 whitespace-nowrap text-lg">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm">
                           <button
                             onClick={() => handleViewUser(user.id)}
-                            className="px-4 py-2 bg-blue-200 text-gray-800 rounded-full text-sm font-medium hover:bg-blue-300 transition-colors"
+                            className="px-6 py-2 text-white rounded-full text-sm font-medium"
+                            style={{
+                              background: 'linear-gradient(to right, #ABBCD6, #ACBED7)'
+                            }}
                           >
                             View
                           </button>
@@ -176,14 +173,17 @@ function Users() {
 
               {/* Pagination */}
               <div className="bg-white px-6 py-4 border-t border-gray-200 flex items-center justify-between">
-                <div className="text-sm text-gray-700">
+                <div className="text-sm text-gray-500">
                   Showing {startIndex + 1} of {filteredUsers.length}
                 </div>
                 <div className="flex items-center space-x-2">
                   <button
                     onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
                     disabled={currentPage === 1}
-                    className="p-2 rounded-lg border border-gray-300 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="p-2 rounded-lg text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                    style={{
+                      backgroundColor: '#ABBCD6'
+                    }}
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -192,7 +192,10 @@ function Users() {
                   <button
                     onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
                     disabled={currentPage === totalPages}
-                    className="p-2 rounded-lg border border-gray-300 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="p-2 rounded-lg text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                    style={{
+                      backgroundColor: '#ABBCD6'
+                    }}
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

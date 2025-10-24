@@ -233,13 +233,13 @@ function UserDetails() {
                   onClick={() => navigate('/users')}
                   className="mr-4 p-2 rounded-lg hover:bg-gray-100"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                   </svg>
                 </button>
                 <div>
-                  <h1 className="text-4xl font-bold text-gray-900">User Details</h1>
-                  <p className="text-lg text-gray-600 mt-2">View all the details about the user here</p>
+                  <h1 className="text-3xl font-bold text-gray-900">User Details</h1>
+                  <p className="text-sm text-gray-500 mt-1 italic">View all the details about the user here</p>
                 </div>
               </div>
             </div>
@@ -248,48 +248,50 @@ function UserDetails() {
             <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
               <div className="flex items-center gap-8">
                 {/* User Avatar */}
-                <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <img src="/api/placeholder/80/80" alt="User" className="w-full h-full rounded-full object-cover" />
+                <div className="w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+                  <img 
+                    src="https://randomuser.me/api/portraits/men/32.jpg" 
+                    alt="User" 
+                    className="w-full h-full rounded-full object-cover" 
+                  />
                 </div>
                 
-                {/* User Information - Single Row */}
+                {/* User Information - Two Rows */}
                 <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-x-10 gap-y-3 text-base">
-                    <div className="flex items-center gap-2">
-                      <span className="text-gray-600 font-medium">Name:</span>
-                      <span className="font-semibold text-gray-900 text-lg">{userInfo.name}</span>
+                  <div className="flex flex-wrap items-center gap-x-8 gap-y-2 text-base mb-3">
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-900 font-medium">Name-</span>
+                      <span className="font-semibold text-gray-900">{userInfo.name}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-gray-600 font-medium">Phone:</span>
-                      <span className="font-semibold text-gray-900 text-lg">{userInfo.phone}</span>
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-900 font-medium">Phone number -</span>
+                      <span className="font-semibold text-gray-900">{userInfo.phone}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-gray-600 font-medium">Joined:</span>
-                      <span className="font-semibold text-gray-900 text-lg">{userInfo.joined}</span>
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-900 font-medium">Joined On -</span>
+                      <span className="font-semibold text-gray-900">{userInfo.joined}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-gray-600 font-medium">City:</span>
-                      <span className="font-semibold text-gray-900 text-lg">{userInfo.city}</span>
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-900 font-medium">City-</span>
+                      <span className="font-semibold text-gray-900">{userInfo.city}</span>
                     </div>
                   </div>
-                  <div className="flex flex-wrap items-center gap-x-10 gap-y-3 text-base mt-4">
-                    <div className="flex items-center gap-2">
-                      <span className="text-gray-600 font-medium">Email:</span>
-                      <span className="font-semibold text-gray-900 text-lg">{userInfo.email}</span>
+                  <div className="flex flex-wrap items-center gap-x-8 gap-y-2 text-base">
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-900 font-medium">E mail ID-</span>
+                      <span className="font-semibold text-gray-900">{userInfo.email}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-gray-600 font-medium">Plan:</span>
-                      <span className="font-semibold text-gray-900 text-lg">{userInfo.plan}</span>
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-900 font-medium">Plan-</span>
+                      <span className="font-semibold text-gray-900">{userInfo.plan}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-gray-600 font-medium">Tickets:</span>
-                      <span className="font-semibold text-gray-900 text-lg">{userInfo.ticketsUploaded}</span>
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-900 font-medium">Tickets Uploaded-</span>
+                      <span className="font-semibold text-gray-900">{userInfo.ticketsUploaded}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-gray-600 font-medium">Status:</span>
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-green-100 text-green-800">
-                        {userInfo.status}
-                      </span>
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-900 font-medium">Status-</span>
+                      <span className="font-semibold text-gray-900">{userInfo.status}</span>
                     </div>
                   </div>
                 </div>

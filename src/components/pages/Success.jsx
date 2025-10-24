@@ -9,11 +9,15 @@ function Success() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-50 to-pink-100 flex items-center justify-center p-6">
+    <div className="min-h-screen flex items-center justify-center p-6" style={{
+      background: 'linear-gradient(to bottom, #ABBCD6, #B5D8E7, #ABBCD6)'
+    }}>
       <div className="bg-white rounded-3xl shadow-2xl p-12 w-full max-w-xl text-center">
         {/* Success Icon */}
         <div className="flex justify-center mb-8">
-          <div className="w-28 h-28 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center shadow-xl animate-pulse">
+          <div className="w-28 h-28 rounded-full flex items-center justify-center shadow-xl" style={{
+            background: '#ABBCD6'
+          }}>
             <svg
               className="w-14 h-14 text-white"
               fill="none"
@@ -44,7 +48,17 @@ function Success() {
         {/* Go to Dashboard Button */}
         <button
           onClick={handleGoToDashboard}
-          className="w-full bg-gradient-to-r from-pink-400 to-purple-500 hover:from-pink-500 hover:to-purple-600 text-white font-semibold text-lg py-5 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 shadow-lg"
+          className="w-full text-white font-semibold text-lg py-5 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-lg"
+          style={{
+            background: '#D597C1',
+            boxShadow: '0 4px 15px rgba(213, 151, 193, 0.4)'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.background = '#C485B0'
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.background = '#D597C1'
+          }}
         >
           Go to Dashboard
         </button>

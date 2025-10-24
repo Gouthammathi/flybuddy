@@ -17,13 +17,9 @@ function Login() {
   }
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen flex items-center justify-center p-6" style={{
       background: 'linear-gradient(to bottom, #ABBCD6, #B5D8E7, #ABBCD6)'
     }}>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-50 to-pink-100 flex items-center justify-center p-6">
->>>>>>> 35935962e1b5c12b0cf53b7e608d8de2fe288573
       <div className="bg-white rounded-3xl shadow-2xl p-12 w-full max-w-xl">
         {/* Logo and Brand */}
         <div className="text-center mb-10">
@@ -110,7 +106,6 @@ function Login() {
           {/* Sign In Button */}
           <button
             type="submit"
-<<<<<<< HEAD
             className="w-full text-white font-semibold text-lg py-5 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-lg mt-8"
             style={{
               background: 'linear-gradient(to right, #ABBCD6, #B5D8E7)',
@@ -122,9 +117,6 @@ function Login() {
             onMouseLeave={(e) => {
               e.target.style.background = 'linear-gradient(to right, #ABBCD6, #B5D8E7)'
             }}
-=======
-            className="w-full bg-gradient-to-r from-pink-400 to-purple-500 hover:from-pink-500 hover:to-purple-600 text-white font-semibold text-lg py-5 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 shadow-lg mt-8"
->>>>>>> 35935962e1b5c12b0cf53b7e608d8de2fe288573
           >
             Sign In
           </button>
